@@ -1,0 +1,15 @@
+.Eightball{
+    border: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    width: 20em;
+    height: 20em;
+    text-align: center;
+
+}
+
+.answer{
+
+    display: flex;
+    justify-content: center;
+}
