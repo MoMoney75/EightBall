@@ -25,34 +25,28 @@ const answers =[
     { msg: "Very doubtful.", color: "red" },
   ]
 
-  function genAnswer(){
-  let idx = Math.floor(Math.random()* answers.length);
-  for(let i=0; i <= answers.length; i++){
-      let background_color = answers[idx].color
-      return(
-       <div className="Eightball" style={{backgroundColor:background_color}}>
-        <p>{answers[idx].msg}</p>
-        </div>
-      )
-  }}
+ 
 
 function Eightball(){
-const [answer, setAnswer] = useState("Think of a question");
+    const [answer, setAnswer] = useState("Think of a question");
+    const [color, setColor] = useState("black")
+
+    function genAnswer(){
+        let idx = Math.floor(Math.random()* answers.length);
+            const background_color = answers[idx].color;
+            const new_answer = answers[idx].msg;
+            setAnswer(new_answer);
+            setColor(background_color);
+    }
 
             return(
-
-
-
-                    <>
+                    <div className="Eightball" style={{backgroundColor:color}}>
                 <p className="answer">{answer}</p>
-                <button onClick={()=> setAnswer(genAnswer)}>get answer</button>
-                    </>
+                <button id="button" onClick={genAnswer}>get answer</button>
+                    </div>
             
-
         )
+
 }
-
-     
-
-
-export {Eightball}
+    
+export default Eightball

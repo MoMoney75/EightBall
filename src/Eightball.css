@@ -9,7 +9,15 @@
 }
 
 .answer{
-
+    font-size: 20px;
+    font-weight: bolder;
+    position: relative;
     display: flex;
     justify-content: center;
+    text-align: center;
+    margin-top: 8rem;
+}
+
+#button{
+    margin-top: 5px;
 }
